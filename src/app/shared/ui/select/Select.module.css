@@ -1,0 +1,75 @@
+.Trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+
+    &>span:nth-child(1) {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .Icon {
+        flex-shrink: 0;
+    }
+}
+
+.Content {
+    overflow: hidden;
+    background-color: #fdf8fa;
+    border-radius: 50px;
+    box-shadow:
+            0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+            0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+}
+
+.Viewport {
+    padding: 15px 0;
+}
+
+.Item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+    font-size: 15px;
+    transition: 100ms linear all;
+
+    &[data-disabled] {
+        pointer-events: none;
+    }
+    &[data-highlighted], &[data-state="checked"] {
+        outline: none;
+        background-color: #e8e7ec;
+    }
+
+    .ItemIndicator {
+        width: 25px;
+        flex-shrink: 0;
+    }
+}
+
+.Label {
+    padding: 0 25px;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.Separator {
+    height: 1px;
+    background-color: #cccccc;
+    margin: 5px;
+}
+
+.ScrollButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    background-color: white;
+    cursor: default;
+}

@@ -1,0 +1,22 @@
+.audioVisualizationWrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    .visualization {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #c8e4fa;
+        transition: 500ms ease all;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #204f75;
+        width: 30px;
+    }
+}

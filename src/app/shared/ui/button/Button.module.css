@@ -1,0 +1,28 @@
+.button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 20px;
+
+    &.inline {
+        width: auto;
+    }
+
+    &.sm {
+        padding: 10px 20px;
+    }
+
+    &.red {
+        background: #540b0e;
+    }
+
+    &.green {
+        background: #588157;
+    }
+}

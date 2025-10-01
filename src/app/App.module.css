@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    .logo {
+        color: #c28c45;
+    }
+}
