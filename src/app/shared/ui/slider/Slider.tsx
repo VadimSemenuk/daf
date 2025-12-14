@@ -11,10 +11,7 @@ export default function Slider(props: SliderProps) {
       <_Slider.Track className={style.SliderTrack}>
         <_Slider.Range className={style.SliderRange} />
       </_Slider.Track>
-      <_Slider.Thumb
-        className={style.SliderThumb}
-        aria-label="Volume"
-      />
+      <_Slider.Thumb className={style.SliderThumb} />
     </_Slider.Root>
   );
 }

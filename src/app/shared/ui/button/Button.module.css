@@ -1,21 +1,71 @@
 .button {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 20px;
-    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     max-width: 400px;
-    gap: 20px;
+    gap: 10px;
+    flex-shrink: 0;
+    transition: all 150ms linear;
+
+    &:hover {
+        background: #00000008;
+    }
+
+    &.active {
+        &.bg {
+            border-radius: 20px;
+        }
+    }
+
+    &.inactive {
+        &.filled {
+            background: var(--primary-light-color);
+            color: var(--primary-color);
+        }
+
+    }
 
     &.inline {
         width: auto;
     }
 
+    &.block {
+        width: 100%;
+    }
+
     &.sm {
-        padding: 10px 20px;
+        padding: 10px;
+        border-radius: 60px;
+    }
+
+    &.md {
+        padding: 20px;
+        border-radius: 80px;
+    }
+
+    &.bg {
+        padding: 30px;
+        border-radius: 100px;
+    }
+
+    &.wide {
+        min-width: 130px;
+    }
+
+    &.narrow {
+        &.bg {
+            padding: 30px 15px;
+            border-radius: 100px;
+        }
+    }
+
+    &.filled {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    &.outlined {
+        border: 1px solid var(--primary-light-color);
     }
 
     &.red {

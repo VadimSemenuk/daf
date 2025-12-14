@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .controlWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .titleWrapper {
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                width: 100%;
+            }
+
+            .value {
+                flex-shrink: 0;
+            }
+        }
+    }
+}

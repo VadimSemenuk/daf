@@ -10,7 +10,7 @@ interface SelectProps {
   onValueChange(value: string): void;
 }
 
-interface Option {
+export interface Option {
   value: string;
   textValue: string;
 }

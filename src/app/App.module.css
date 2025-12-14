@@ -1,11 +1,72 @@
 .app {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    padding: 10px;
 
-    .logo {
-        color: #c28c45;
+    .headerWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        max-width: 400px;
+
+        .titleWrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 40px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .appContainer {
+        max-width: 400px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .warningsList {
+        background-color: #FFD392;
+        color: #503002;
+        border-radius: 20px;
+        width: 100%;
+
+        .warningItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 15px 20px;
+            padding-right: 10px;
+            border-bottom: 1px solid #5030020f;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .actionsWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .left, .right {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center {
+            flex-shrink: 0;
+        }
     }
 }

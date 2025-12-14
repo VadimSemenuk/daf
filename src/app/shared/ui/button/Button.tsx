@@ -9,23 +9,43 @@ type Base = React.DetailedHTMLProps<
 
 interface Props extends Base {
   children: ReactElement | ReactElement[] | string;
+  isActive?: boolean;
   inline?: boolean;
   sm?: boolean;
-  red?: boolean;
-  green?: boolean;
+  bg?: boolean;
+  wide?: boolean;
+  narrow?: boolean;
+  filled?: boolean;
+  outlined?: boolean;
 }
 
-export default function Button({ children, inline, sm, red, green, ...props }: Props) {
+export default function Button({
+  children,
+  isActive,
+  inline = true,
+  sm,
+  bg,
+  wide,
+  narrow,
+  filled,
+  outlined,
+  ...props
+}: Props) {
   return (
     <button
       {...props}
       className={classnames(
         styles.button,
         props.className,
-        inline ? styles.inline : null,
+        inline ? styles.inline : styles.block,
         sm ? styles.sm : null,
-        red ? styles.red : null,
-        green ? styles.green : null,
+        !sm && !bg ? styles.md : null,
+        bg ? styles.bg : null,
+        wide ? styles.wide : null,
+        narrow ? styles.narrow : null,
+        filled ? styles.filled : null,
+        outlined ? styles.outlined : null,
+        isActive == undefined ? null : isActive ? styles.active : styles.inactive,
       )}
     >
       {children}
