@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# DAF / FAF — веб-версия слуховой обратной связи для речи
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот репозиторий содержит веб-реализацию технологий **DAF (Delayed Auditory Feedback)** и **FAF (Frequency Altered Feedback)** — методов слуховой обратной связи, которые используются в логопедической практике для работы с заиканием и нарушениями плавности речи.
 
-Currently, two official plugins are available:
+## Кратко о технологиях
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **DAF** — пользователь слышит свою речь с небольшой задержкой, что помогает замедлить темп речи и повысить контроль над артикуляцией.
+- **FAF** — пользователь слышит свою речь с изменённой высотой тона, что может снижать автоматизм и напряжение речи.
 
-## React Compiler
+## Попробовать онлайн
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Разработка доступна по следующим ссылкам:
 
-## Expanding the ESLint configuration
+- **DAF:** https://daf.logoadult.by/
+- **FAF:** https://faf.logoadult.by/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Важное замечание
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+⚠️ **DAF и FAF не являются самостоятельным лечением.**  
+Данные технологии применяются **только как дополнение к работе с логопедом** и наиболее эффективны в составе комплексной речевой терапии.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## О разработке
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Программы созданы **при поддержке и консультациях логопеда для взрослых с большим практическим опытом работы**.  
+Специалист работает со следующими направлениями:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- заикание
+- постановка и коррекция звуков
+- речевые нарушения и последствия инсульта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Подробнее и запись на приём
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👉 Больше информации о терапии и **запись на консультацию логопеда**:  
+**https://www.logoadult.by**
